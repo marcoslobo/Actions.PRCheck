@@ -36,8 +36,7 @@ namespace Actions.PRCheck
 
             using (StreamReader r = new StreamReader(Environment.GetEnvironmentVariable("GITHUB_EVENT_PATH")))
             {
-                json = r.ReadToEnd();
-                
+                json = r.ReadToEnd();                
             }
 
             var githubAction = JsonConvert.DeserializeObject<GitHubActionModelInside>(json);

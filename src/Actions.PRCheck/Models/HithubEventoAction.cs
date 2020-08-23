@@ -136,7 +136,7 @@ namespace Actions.PRCheck
         public Uri ContributorsUrl { get; set; }
 
         [JsonProperty("created_at")]
-        public long CreatedAt { get; set; }
+        public string CreatedAt { get; set; }
 
         [JsonProperty("default_branch")]
         public string DefaultBranch { get; set; }
