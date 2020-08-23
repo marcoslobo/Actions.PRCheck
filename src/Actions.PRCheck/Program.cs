@@ -23,6 +23,7 @@ namespace Actions.PRCheck
             Environment.SetEnvironmentVariable("message", "Tudo allright");
 
             Console.WriteLine("::set-output name=steps.message::Tudo allright");
+            throw new Exception("Erro geral!");
         }
     }
 }
