@@ -12,8 +12,8 @@ namespace Actions.PRCheck
         static async Task Main(string[] args)
         {
 
-         
-            
+
+
             //using (var client = new HttpClient())
             //{
             //    client.DefaultRequestHeaders.Add("Accept", "application/vnd.github.v3+json");
@@ -26,10 +26,13 @@ namespace Actions.PRCheck
 
             //GITHUB_HEAD_REF - e GITHUB_BASE_REF
 
-            //Console.Out.WriteLine($"GITHUB_HEAD_REF -> {Environment.GetEnvironmentVariable("GITHUB_HEAD_REF")}");
-            //Console.Out.WriteLine($"GITHUB_BASE_REF -> {Environment.GetEnvironmentVariable("GITHUB_BASE_REF")}");
+
             //Console.Out.WriteLine($"BRANCH_REF -> {Environment.GetEnvironmentVariable("BRANCH_REF")}");
-            //Console.Out.WriteLine($"GITHUB_EVENT_PATH -> {Environment.GetEnvironmentVariable("GITHUB_EVENT_PATH")}");
+
+
+            Console.Out.WriteLine($"GITHUB_HEAD_REF -> {Environment.GetEnvironmentVariable("GITHUB_HEAD_REF")}");
+            Console.Out.WriteLine($"GITHUB_BASE_REF -> {Environment.GetEnvironmentVariable("GITHUB_BASE_REF")}");
+            Console.Out.WriteLine($"GITHUB_EVENT_PATH -> {Environment.GetEnvironmentVariable("GITHUB_EVENT_PATH")}");
 
 
             var json = "";
