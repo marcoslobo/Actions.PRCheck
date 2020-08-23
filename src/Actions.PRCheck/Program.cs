@@ -26,10 +26,13 @@ namespace Actions.PRCheck
             Console.Out.WriteLine($"GITHUB_HEAD_REF -> {Environment.GetEnvironmentVariable("GITHUB_HEAD_REF")}");
             Console.Out.WriteLine($"GITHUB_BASE_REF -> {Environment.GetEnvironmentVariable("GITHUB_BASE_REF")}");
             Console.Out.WriteLine($"BRANCH_REF -> {Environment.GetEnvironmentVariable("BRANCH_REF")}");
-
+            Console.Out.WriteLine($"GITHUB_EVENT_PATH -> {Environment.GetEnvironmentVariable("GITHUB_EVENT_PATH")}");
             
 
-            
+
+
+
+
             Console.Out.WriteLine($"ARGS -> {string.Join(" ", args)}");
 
         }
