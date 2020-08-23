@@ -20,7 +20,7 @@ namespace Actions.PRCheck
                 var a = JsonConvert.DeserializeObject<List<GitHubModels>>(content);
             }
 
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("::set-output name=message::Tudo allright");
         }
     }
 }
