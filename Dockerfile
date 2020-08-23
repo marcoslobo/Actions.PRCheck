@@ -1,7 +1,5 @@
 FROM mcr.microsoft.com/dotnet/core/runtime:3.1-alpine AS base
 
-ENV GITHUB_HEAD_REF=$GITHUB_HEAD_REF
-ENV GITHUB_BASE_REF=$GITHUB_BASE_REF
 ENV BRANCH_REF=$BRANCH_REF
 
 WORKDIR /app
