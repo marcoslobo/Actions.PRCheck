@@ -19,13 +19,12 @@ namespace Actions.PRCheck
                 var content = await client.GetStringAsync("https://api.github.com/repos/prefeiturasp/SME-NovoSGP/pulls?state=open");
                 var a = JsonConvert.DeserializeObject<List<GitHubModels>>(content);
             }
-            Environment.SetEnvironmentVariable("steps.message", "Tudo allright!");
-            Environment.SetEnvironmentVariable("message", "Tudo allright");
-            Console.WriteLine("set-output name=steps.message::Tudo allright!!");
-            Console.WriteLine("::set-output name=message::Tudo allright!!");
 
 
-            Console.Out.WriteLine($"INPUT_BRANCH-FROM -> {Environment.GetEnvironmentVariable("INPUT_BRANCH-FROM")}");
+            //GITHUB_HEAD_REF - e GITHUB_BASE_REF
+            
+            Console.Out.WriteLine($"GITHUB_HEAD_REF -> {Environment.GetEnvironmentVariable("GITHUB_HEAD_REF")}");
+            Console.Out.WriteLine($"GITHUB_BASE_REF -> {Environment.GetEnvironmentVariable("GITHUB_BASE_REF")}");
             Console.Out.WriteLine($"ARGS -> {string.Join(" ", args)}");
 
         }
