@@ -28,6 +28,8 @@ namespace Actions.PRCheck
             Console.Out.WriteLine($"BRANCH_REF -> {Environment.GetEnvironmentVariable("BRANCH_REF")}");
 
             
+
+            
             Console.Out.WriteLine($"ARGS -> {string.Join(" ", args)}");
 
         }

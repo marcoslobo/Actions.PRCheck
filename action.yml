@@ -1,9 +1,13 @@
 # action.yml
 name: 'PR CHECK'
 description: 'Checa se há PR abertos em outros branches'
+inputs:
+    branch:  # id of input
+      description: 'branch from'
+      required: true      
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.branch-from }}  
+    - ${{ inputs.branch }}  
     
