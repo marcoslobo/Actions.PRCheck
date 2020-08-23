@@ -19,11 +19,15 @@ namespace Actions.PRCheck
                 var content = await client.GetStringAsync("https://api.github.com/repos/prefeiturasp/SME-NovoSGP/pulls?state=open");
                 var a = JsonConvert.DeserializeObject<List<GitHubModels>>(content);
             }
-            Environment.SetEnvironmentVariable("steps.message", "Tudo allright!");
-            Environment.SetEnvironmentVariable("message", "Tudo allright");
+            //Environment.SetEnvironmentVariable("steps.message", "Tudo allright!");
+            //Environment.SetEnvironmentVariable("message", "Tudo allright");
+            //Console.WriteLine("set-output name=steps.message::Tudo allright");
 
-            Console.WriteLine("::set-output name=steps.message::Tudo allright");
-            throw new Exception("Erro geral!");
+
+            Console.Out.WriteLine("steps.message", "Tudo allright!");
+            Console.Out.WriteLine("message", "Tudo allright");
+            Console.Out.WriteLine("set-output name=steps.message::Tudo allright");
+            
         }
     }
 }
