@@ -5,10 +5,12 @@ inputs:
   branch-from:  # id of input
     description: 'branch from'
     required: true    
+outputs:
+    message: #response message
+        description: 'The analyse of branches.'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.branch-from }}
-  env:
-    workdir: '/app'
+    - ${{ inputs.branch-from }}  
+    
