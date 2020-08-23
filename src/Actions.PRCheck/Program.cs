@@ -34,12 +34,8 @@ namespace Actions.PRCheck
             {
                 string json = r.ReadToEnd();
 
-                dynamic array = JsonConvert.DeserializeObject(json);
-
-                foreach (var item in array)
-                {
-                    Console.Out.WriteLine("{0} {1}", item.temp, item.vcc);
-                }
+                Console.Out.WriteLine(json);
+                
 
             }
 
