@@ -271,7 +271,7 @@ namespace Actions.PRCheck
         public string PullsUrl { get; set; }
 
         [JsonProperty("pushed_at")]
-        public long PushedAt { get; set; }
+        public string PushedAt { get; set; }
 
         [JsonProperty("releases_url")]
         public string ReleasesUrl { get; set; }
@@ -313,7 +313,7 @@ namespace Actions.PRCheck
         public string TreesUrl { get; set; }
 
         [JsonProperty("updated_at")]
-        public DateTimeOffset UpdatedAt { get; set; }
+        public string UpdatedAt { get; set; }
 
         [JsonProperty("url")]
         public Uri Url { get; set; }
