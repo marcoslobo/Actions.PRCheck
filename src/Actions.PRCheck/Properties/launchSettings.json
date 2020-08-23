@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Actions.PRCheck": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
