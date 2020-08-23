@@ -25,10 +25,9 @@ namespace Actions.PRCheck
             Console.WriteLine("::set-output name=steps.message::Tudo allright!!");
 
 
-            Console.Out.WriteLine("steps.message", "Tudo allright!");
-            Console.Out.WriteLine("message", "Tudo allright");
-            Console.Out.WriteLine("set-output name=steps.message::Tudo allright");
-            
+            Console.Out.WriteLine($"INPUT_BRANCH-FROM -> {Environment.GetEnvironmentVariable("INPUT_BRANCH-FROM")}");
+            Console.Out.WriteLine($"ARGS -> {string.Join(" ", args)}");
+
         }
     }
 }
