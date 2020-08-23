@@ -22,7 +22,7 @@ namespace Actions.PRCheck
             Environment.SetEnvironmentVariable("steps.message", "Tudo allright!");
             Environment.SetEnvironmentVariable("message", "Tudo allright");
             Console.WriteLine("set-output name=steps.message::Tudo allright!!");
-            Console.WriteLine("::set-output name=steps.message::Tudo allright!!");
+            Console.WriteLine("::set-output name=message::Tudo allright!!");
 
 
             Console.Out.WriteLine($"INPUT_BRANCH-FROM -> {Environment.GetEnvironmentVariable("INPUT_BRANCH-FROM")}");
