@@ -36,7 +36,7 @@ namespace Actions.PRCheck
 
                 Console.Out.WriteLine(json);
 
-                var a = JsonConvert.DeserializeObject<List<GitHubActionModelInside>>(json);
+                var a = JsonConvert.DeserializeObject<GitHubActionModelInside>(json);
 
 
             }
