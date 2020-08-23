@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -22,15 +23,25 @@ namespace Actions.PRCheck
 
 
             //GITHUB_HEAD_REF - e GITHUB_BASE_REF
-            
+
             Console.Out.WriteLine($"GITHUB_HEAD_REF -> {Environment.GetEnvironmentVariable("GITHUB_HEAD_REF")}");
             Console.Out.WriteLine($"GITHUB_BASE_REF -> {Environment.GetEnvironmentVariable("GITHUB_BASE_REF")}");
             Console.Out.WriteLine($"BRANCH_REF -> {Environment.GetEnvironmentVariable("BRANCH_REF")}");
             Console.Out.WriteLine($"GITHUB_EVENT_PATH -> {Environment.GetEnvironmentVariable("GITHUB_EVENT_PATH")}");
-            
 
 
+            using (StreamReader r = new StreamReader(Environment.GetEnvironmentVariable("GITHUB_EVENT_PATH")))
+            {
+                string json = r.ReadToEnd();
 
+                dynamic array = JsonConvert.DeserializeObject(json);
+
+                foreach (var item in array)
+                {
+                    Console.Out.WriteLine("{0} {1}", item.temp, item.vcc);
+                }
+
+            }
 
 
             Console.Out.WriteLine($"ARGS -> {string.Join(" ", args)}");
