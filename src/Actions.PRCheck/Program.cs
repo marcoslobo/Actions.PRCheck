@@ -50,15 +50,18 @@ namespace Actions.PRCheck
                 Console.Out.WriteLine($"Verificando se este Pull Request possui TAG de verificação AB#NUMERO-DA-TASK");
 
                 var tag = "";
+                var msgBody = gitHubContext.Event.PullRequest.Body;
+                
+                Console.Out.WriteLine(msgBody);
 
-                if (gitHubContext.Event.PullRequest.Body.Contains("AB#"))
+                if (msgBody.Contains("AB#"))
                 {
-                    var msg = gitHubContext.Event.PullRequest.Body;
-                    var inicio = msg.IndexOf("AB#");
-                    msg = msg.Remove(0, inicio);
+                    
+                    var inicio = msgBody.IndexOf("AB#");
+                    msgBody = msgBody.Remove(0, inicio);
 
-                    var espaco = msg.IndexOf(" ");
-                    tag = msg.Remove(espaco);
+                    var espaco = msgBody.IndexOf(" ");
+                    tag = msgBody.Remove(espaco);
                 }
 
                 if (string.IsNullOrEmpty(tag))
