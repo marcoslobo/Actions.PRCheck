@@ -1,9 +1,6 @@
 ﻿using Actions.PRCheck.Context;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace Actions.PRCheck
@@ -71,7 +68,7 @@ namespace Actions.PRCheck
                 Console.Out.WriteLine(tag);
             }
 
-                
+
 
             //var branchFrom = githubAction.Ref.Replace("refs/heads/", "");
 
@@ -102,22 +99,22 @@ namespace Actions.PRCheck
             //        throw new Exception("Não foi localizado a tag AB#NUMERO-DA-TASK no Pull Request");
 
 
-                //Console.Out.WriteLine($"-- --");
+            //Console.Out.WriteLine($"-- --");
 
 
-                //Console.Out.WriteLine($"Verificando se a branch");
-                //Console.Out.WriteLine($"Master possui Pull Request aberto para as branches Development e Release com a tag ");
+            //Console.Out.WriteLine($"Verificando se a branch");
+            //Console.Out.WriteLine($"Master possui Pull Request aberto para as branches Development e Release com a tag ");
 
-                //Console.Out.WriteLine($"-- --");
+            //Console.Out.WriteLine($"-- --");
 
-            }
-
-            
-
-
-
-                //Console.Out.WriteLine($"ARGS -> {string.Join(" ", args)}");
-          
         }
+
+
+
+
+
+        //Console.Out.WriteLine($"ARGS -> {string.Join(" ", args)}");
+
     }
 }
+
