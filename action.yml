@@ -3,11 +3,6 @@ name: 'PR CHECK'
 description: 'Checa se há PR abertos em outros branches'
 runs:
   using: 'docker'
-  image: 'Dockerfile'
-  env:
-    GITHUB_CONTEXT: ${{ toJson(github) }}
-  run: |
-    echo "$GITHUB_CONTEXT"
-    echo ${{ github.event.pull_request.title }}
+  image: 'Dockerfile'  
   
     
