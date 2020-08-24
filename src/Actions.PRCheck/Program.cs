@@ -60,15 +60,23 @@ namespace Actions.PRCheck
                     var inicio = msgBody.IndexOf("AB#");
                     msgBody = msgBody.Remove(0, inicio);
 
-                    var espaco = msgBody.IndexOf(" ");
-                    tag = msgBody.Remove(espaco);
+                    if (msgBody.Contains(" "))
+                    {
+                        var espaco = msgBody.IndexOf(" ");
+                        msgBody = msgBody.Remove(espaco);
+                    }
+
+                    tag = msgBody;
                 }
 
                 if (string.IsNullOrEmpty(tag))
                     throw new Exception("Não foi localizado a tag AB#NUMERO-DA-TASK no Pull Request");
-
-
-                Console.Out.WriteLine(tag);
+                else                
+                {
+                    Console.Out.WriteLine($"TAG para buscar nos Pull Requests para Developement e Release {tag}");                    
+                }
+                
+                
             }
 
 
